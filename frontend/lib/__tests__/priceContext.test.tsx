@@ -341,7 +341,7 @@ describe("PriceProvider — degraded state", () => {
     for (let i = 0; i <= MAX_CONSECUTIVE_FAILURES; i++) {
       await act(async () => {
         await Promise.resolve();
-        jest.advanceTimersByTime(30_000); // past the initial backoff
+        jest.advanceTimersByTime(65_000); // past the initial backoff
         await Promise.resolve();
       });
     }
@@ -358,7 +358,7 @@ describe("PriceProvider — degraded state", () => {
     for (let i = 0; i <= MAX_CONSECUTIVE_FAILURES; i++) {
       await act(async () => {
         await Promise.resolve();
-        jest.advanceTimersByTime(30_000);
+        jest.advanceTimersByTime(65_000);
         await Promise.resolve();
       });
     }
@@ -379,7 +379,7 @@ describe("PriceProvider — degraded state", () => {
     for (let i = 0; i <= MAX_CONSECUTIVE_FAILURES; i++) {
       await act(async () => {
         await Promise.resolve();
-        jest.advanceTimersByTime(30_000);
+        jest.advanceTimersByTime(65_000);
         await Promise.resolve();
       });
     }
@@ -409,7 +409,7 @@ describe("PriceProvider — degraded state", () => {
     for (let i = 0; i <= MAX_CONSECUTIVE_FAILURES; i++) {
       await act(async () => {
         await Promise.resolve();
-        jest.advanceTimersByTime(30_000);
+        jest.advanceTimersByTime(65_000);
         await Promise.resolve();
       });
     }
@@ -451,7 +451,7 @@ describe("PriceProvider — degraded state", () => {
     // Backoffs: 5s, 10s, 20s — advance generously to trigger each
     for (let i = 0; i < MAX_CONSECUTIVE_FAILURES + 1; i++) {
       await act(async () => {
-        jest.advanceTimersByTime(30_000);
+        jest.advanceTimersByTime(65_000);
       });
       await act(async () => {
         await Promise.resolve();
